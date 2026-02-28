@@ -75,20 +75,13 @@ h2 {
     border-bottom: 3px solid #003366;
     padding-bottom: 5px;
 }
-/*
 .resource-card {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
-
-.highlight {
-    background: #e6f2ff;
-    border-left: 5px solid #003366;
-}
-*/
 input, select, textarea {
     padding: 8px;
     margin: 5px 0;
