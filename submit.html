@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Resource</title>
+
+<style>
+body { margin:0; font-family: Georgia, serif; background:#f4f6f8; }
+
+nav {
+    background:#003366;
+    padding:15px;
+    text-align:center;
+}
+
+nav a {
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section {
+    max-width:700px;
+    margin:40px auto;
+    padding:20px;
+    background:white;
+    border-radius:8px;
+}
+
+input, textarea, select {
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button {
+    padding:12px;
+    background:#003366;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="submit.html">Submit Resource</a>
+    <a href="highlights.html">Community Highlights</a>
+</nav>
+
+<section>
+    <h2>Submit a Community Resource</h2>
+
+    <form onsubmit="alert('Thank you for your submission!'); return false;">
+        <label>Resource Name</label>
+        <input type="text" required>
+
+        <label>Category</label>
+        <select required>
+            <option>Food</option>
+            <option>Housing</option>
+            <option>Healthcare</option>
+            <option>Education</option>
+        </select>
+
+        <label>Description</label>
+        <textarea rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+</body>
+</html>
