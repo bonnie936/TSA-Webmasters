@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Resources</title>
+
+<style>
+body { margin:0; font-family: Georgia, serif; background:#f4f6f8; }
+
+nav {
+    background:#003366;
+    padding:15px;
+    text-align:center;
+}
+
+nav a {
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section {
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+input, select {
+    padding:10px;
+    margin:10px 5px;
+}
+
+.resource-card {
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="submit.html">Submit Resource</a>
+    <a href="highlights.html">Community Highlights</a>
+</nav>
+
+<section>
+    <h2>Community Resource Directory</h2>
+
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterResources()">
+
+    <select id="categoryFilter" onchange="filterResources()">
+        <option value="all">All Categories</option>
+        <option value="food">Food</option>
+        <option value="housing">Housing</option>
+        <option value="health">Healthcare</option>
+        <option value="education">Education</option>
+    </select>
+
+    <div class="resource-card" data-category="food">
+        <h3>Food Pantry</h3>
+        <p>Provides groceries to families in need.</p>
+    </div>
+
+    <div class="resource-card" data-category="housing">
+        <h3>Housing Assistance</h3>
+        <p>Rent and utility support programs.</p>
+    </div>
+
+    <div class="resource-card" data-category="health">
+        <h3>Health Clinic</h3>
+        <p>Low-cost medical services.</p>
+    </div>
+
+    <div class="resource-card" data-category="education">
+        <h3>Adult Learning Center</h3>
+        <p>GED prep and job training.</p>
+    </div>
+
+</section>
+
+<script>
+function filterResources() {
+    const searchValue = document.getElementById("searchInput").value.toLowerCase();
+    const categoryValue = document.getElementById("categoryFilter").value;
+    const cards = document.querySelectorAll(".resource-card");
+
+    cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        const category = card.getAttribute("data-category");
+
+        const matchesSearch = text.includes(searchValue);
+        const matchesCategory = categoryValue === "all" || category === categoryValue;
+
+        if (matchesSearch && matchesCategory) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
