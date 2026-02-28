@@ -7,12 +7,61 @@
 
 <style>
 body {
-    font-family: Georgia, "Times New Roman", serif;
+   /* font-family: Georgia, "Times New Roman", serif;
     margin: 0;
     background-color: #f4f6f8;
     color: #333;
+} */
+body {
+    margin: 0;
+    font-family: Georgia, serif;
 }
 
+/* Sticky Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #003366;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Full Screen Hero */
+.hero {
+    height: 100vh;
+    background-image: url("images/fillerpic.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    padding-top: 60px; /* prevents overlap with navbar */
+}
+
+/* Hero Text */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Body Content */
+.content {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+    
 header {
     height: 100vh;
     background-image: url("images/fillerpic.jpg");
@@ -26,6 +75,8 @@ header {
     color: white;
 }
 
+
+    
 /*
 nav {
     background: #00509e;
@@ -97,6 +148,25 @@ footer {
 </style>
 </head>
 
+<body>
+
+<nav class="navbar">
+    <h2>Johnson County Resource Hub</h2>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Johnson County</h1>
+        <p>Connecting residents to local resources</p>
+    </div>
+</header>
+
+<section class="content">
+    <h2>Community Resources</h2>
+    <p>Body content goes here...</p>
+</section>
+
+</body>
 <!--
     
 <body>
