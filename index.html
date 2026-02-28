@@ -28,17 +28,27 @@ body {
 
     
 header {
-    height: 100vh;
-    background-image: url("images/media-2677010513.jpg");
+    position: relative;
+    background-image: url("images/fillerpic.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+/* Dark overlay */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* adjust darkness here */
+}
+
+/* Keeps text above overlay */
+.header-content {
+    position: relative;
+    z-index: 1;
 }
 
 nav {
@@ -118,11 +128,14 @@ footer {
 </nav>
 
 <header>
-    <h1>Johnson County Community Resource Hub</h1>
-    <p>Connecting residents with local support and opportunities.</p>
-    <a href="resources.html">
-        <button>See Community Resources</button>
-    </a>
+    <div class="header-content">
+        <h1>Johnson County Community Resource Hub</h1>
+        <p>Connecting residents with local support and opportunities.</p>
+
+        <a href="resources.html">
+            <button>See Community Resources</button>
+        </a>
+    </div>
 </header>
 
 <section>
@@ -137,163 +150,6 @@ footer {
 </body>
 </html>
 
-
-<!--
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Johnson County, Kentucky Community Resource Hub</title>
-
-<style>
-
-body {
-   margin: 0;
-   font-family: Georgia, serif;
-   background-color: #ecebe6;
-   color: #333;
-}
-
-/* Sticky Navigation */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #2b2b2b;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
-}
-
-/* Full Screen Hero */
-.hero {
-    height: 100vh;
-    background-image: url("images/media-2677010513.jpg");
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-
-    padding-top: 60px; /* prevents overlap with navbar */
-   position: relative;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-}
-
-.hero-content {
-    position: relative;
-}
-}
-
-/* Hero Text */
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-}
-
-/* Body Content */
-.content {
-    padding: 80px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-    
-header {
-    height: 100vh;
-    background-image: url("images/fillerpic.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-
-    
-/*
-nav {
-    background: #00509e;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    padding: 30px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-h2 {
-    border-bottom: 3px solid #003366;
-    padding-bottom: 5px;
-}
-
-.resource-card {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.highlight {
-    background: #e6f2ff;
-    border-left: 5px solid #003366;
-}
-
-input, select, textarea {
-    padding: 8px;
-    margin: 5px 0;
-    width: 100%;
-    max-width: 500px;
-}
-
-button {
-    background: #003366;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #00509e;
-}
-
-footer {
-    background: #003366;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-*/
 
 
 
