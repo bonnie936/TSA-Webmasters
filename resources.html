@@ -10,10 +10,16 @@
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="resources.html">Resources</a>
-    <a href="submit.html">Submit Resource</a>
-    <a href="highlights.html">Community Highlights</a>
+    <div class="logo">Johnson County Hub</div>
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="submit.html">Submit Resource</a>
+        <a href="highlights.html">Highlights</a>
+    </div>
 </nav>
 
 <section>
@@ -73,5 +79,15 @@ function filterResources() {
 }
 </script>
 
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    if (nav.style.display === "flex") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+    }
+}
+</script>
 </body>
 </html>
