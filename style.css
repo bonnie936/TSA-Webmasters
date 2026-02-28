@@ -3,19 +3,21 @@ body {
    font-family: Georgia, serif;
    background-color: #ecebe6;
    color: #333;
+   padding-top: 90px;
 }
 
 /* Sticky Navigation */
-.navbar {
+nav {
     position: fixed;
     top: 0;
     width: 100%;
     background: #333;
-    padding: 25px 40px;
+    padding: 20px 10px;
 
     display: flex;
     justify-content: center;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
 
     z-index: 1000;
 }
@@ -51,18 +53,13 @@ header::before {
     position: relative;
     z-index: 1;
 }
-/*
-nav {
-    background: #00509e;
-    padding: 10px;
-    text-align: center;
-}
-*/
+
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px
 }
 
 section {
@@ -107,4 +104,16 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
 }
