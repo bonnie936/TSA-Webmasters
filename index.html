@@ -6,15 +6,12 @@
 <title>Johnson County, Kentucky Community Resource Hub</title>
 
 <style>
+
 body {
-   /* font-family: Georgia, "Times New Roman", serif;
-    margin: 0;
-    background-color: #f4f6f8;
-    color: #333;
-} */
-body {
-    margin: 0;
-    font-family: Georgia, serif;
+   margin: 0;
+   font-family: Georgia, serif;
+   background-color: #f4f6f8;
+   color: #333;
 }
 
 /* Sticky Navigation */
@@ -43,6 +40,19 @@ body {
     color: white;
 
     padding-top: 60px; /* prevents overlap with navbar */
+   position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: relative;
+}
 }
 
 /* Hero Text */
