@@ -167,13 +167,7 @@ input, select, textarea { /* search bar */
     width: 100%;
     border-radius: 8px;
 }
-/* IDK BRUH
-.modal-content img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-*/
+
 .close { /* close window button */
     position: absolute;
     top: 15px;
@@ -238,18 +232,6 @@ form input, form select, form textarea { /* form input boxes */
     font-family: Georgia, serif;
     font-size: 15px;
 }
-
-/* IDK BRUH
-form textarea {
-    resize: vertical;
-}
-form button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-}
-*/
 
 /* HIGHLIGHT CARDS */
 .highlight-grid {
