@@ -2,19 +2,38 @@
     box-sizing: border-box;
 }
 
-body {
-   margin: 0;
-   font-family: Georgia, serif;
-   background-color: #ecebe6;
-   color: #333;
-   padding-top: 90px;
+/* HEADER */
+header {
+    position: relative;
+    background-image: url("images/media-2677010513.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 20px;
+    margin-top:-90px;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+}
+header::before { /* dark overlay over image on home*/
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.header-content { /* text over overlay */
+    position: relative;
 }
 
+/* NAVIGATION BAR */
 nav {
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
     background: #333;
     color: white;
     padding: 20px 40px;
@@ -24,98 +43,43 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-
-/* Logo */
-.logo {
+nav a {
+    margin: 0 15px;
+}
+.logo { /* Johnson County Hub logo*/
     font-weight: bold;
     font-size: 18px;
 }
-
-/* Links */
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
+.nav-links a { /* links on navigation bar*/
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-
-/* Hamburger icon */
+} 
 .menu-icon {
     display: none;
     font-size: 26px;
     cursor: pointer;
 }
 
-    
-header {
-    position: relative;
-    background-image: url("images/media-2677010513.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    /*text-align: center;*/
-    padding: 120px 20px;
-    margin-top:-90px;
-    width: 100vw; /* 100% of the viewport width */
-    height: 100vh; /* 100% of the viewport height */
-  
-    display: flex;
-    justify-content: center; /* Centers text horizontally */
-    align-items: center;     /* Centers text vertically */
-    text-align: center;
+/* GENERAL */
+body { /* body margins */
+   margin: 0;
+   font-family: Georgia, serif;
+   background-color: #ecebe6;
+   color: #333;
+   padding-top: 90px;
 }
-
-/* Dark overlay */
-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* adjust darkness here */
-}
-
-/* Keeps text above overlay */
-.header-content {
-    position: relative;
-    z-index: 1;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px
-}
-
-section {
+section { /* section margins (text) */
     padding: 30px;
     max-width: 1100px;
     margin: auto;
 }
-
-h2 {
+h2 { /* line under headers */
     border-bottom: 3px solid #333;
     padding-bottom: 5px;
 }
-.resource-card {
-    background:white;
-    padding:20px;
-    margin:15px 0;
-    border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
-input, select, textarea {
-    padding: 8px;
-    margin: 5px 0;
-    width: 100%;
-    max-width: 500px;
-}
-
 button {
+    font-family: Georgia, serif;
     background: #333;
     color: white;
     padding: 20px 30px;
@@ -123,32 +87,52 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-
-button:hover {
-    background: #333;
-}
-
-footer {
+bigbutton {
+    font-family: Georgia, serif;
     background: #333;
     color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-
-
-.resource-card {
+    padding: 25px 40px;
+    border: none;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* RESOURCES */
+.resource-card {
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+input, select, textarea { /* search bar */
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 500px;
+}
+#searchInput { /* search bar font */
+    font-family: Georgia, serif;  
+    font-size: 16px;
+}
+#categoryFilter { /* category filter font */
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
 .resource-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
-
-/* Modal background */
-.modal {
+.resource-card { /* makes the hover look better (by slowing it down and stuff) */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.modal { /* modal (the window that pops up when clicking resource cards) background */
     display: none;
     position: fixed;
     inset: 0;
@@ -157,45 +141,53 @@ footer {
     align-items: center;
     z-index: 2000;
 }
-
-/* Modal box */
 .modal-content {
     background: white;
     padding: 30px;
     border-radius: 10px;
     width: 90%;
-    max-width: 600px;
-    text-align: center;
+    max-width: 700px;
     position: relative;
     animation: fadeIn 0.3s ease;
 }
-
-/* Modal image */
+.modal-body { /* 2 columns (puts image and text side by side) */
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center; 
+}
+/* modal text and image format */
+.modal-text {
+    flex: 1;
+} 
+.modal-image {
+    flex: 1;
+} 
+.modal-image img { /* modal image size */
+    width: 100%;
+    border-radius: 8px;
+}
+/* IDK BRUH
 .modal-content img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 15px;
 }
-
-/* Close button */
-.close {
+*/
+.close { /* close window button */
     position: absolute;
     top: 15px;
     right: 20px;
     font-size: 28px;
     cursor: pointer;
 }
-
-/* Simple fade animation */
-@keyframes fadeIn {
+@keyframes fadeIn { /* fade animation for the cards */
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
 
-
-
+/* PHONE STUFF (makes it not look like garbage) */
 @media (max-width: 768px) {
-
     .nav-links {
         display: none;
         position: absolute;
@@ -207,18 +199,15 @@ footer {
         align-items: center;
         padding: 20px 0;
     }
-
     .nav-links a {
         padding: 10px 0;
         width: 100%;
         text-align: center;
     }
-
     .menu-icon {
         display: block;
     }
 }
-
 @media (max-width: 768px) {
     .modal-body {
         flex-direction: column;
@@ -226,55 +215,8 @@ footer {
     }
 }
 
-/* ========================= */
-/* MODAL LAYOUT STYLES BELOW */
-/* ========================= */
-
-.modal-content {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 700px;
-    position: relative;
-    animation: fadeIn 0.3s ease;
-}
-
-/* Two-column layout */
-.modal-body {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    justify-content: center; /* helps center when only text */
-}
-
-/* Left side text */
-.modal-text {
-    flex: 1;
-}
-
-/* Right side image */
-.modal-image {
-    flex: 1;
-}
-
-.modal-image img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-#searchInput {
-    font-family: Georgia, serif;  
-    font-size: 16px;
-}
-#categoryFilter {
-    font-family: Georgia, serif;
-    font-size: 16px;
-}
-
-/* ===== Submit Form Styling ===== */
-
-form {
+/* SUBMIT RESOURCE FORM */
+form { /* form box */
     max-width: 600px;
     margin: 20px auto;
     background: white;
@@ -282,16 +224,12 @@ form {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
 form label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
 }
-
-form input,
-form select,
-form textarea {
+form input, form select, form textarea { /* form input boxes */
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -301,25 +239,23 @@ form textarea {
     font-size: 15px;
 }
 
+/* IDK BRUH
 form textarea {
     resize: vertical;
 }
-
 form button {
     margin-top: 20px;
     width: 100%;
     padding: 12px;
     font-size: 16px;
 }
+*/
 
-/* ===== Community Highlights ===== */
+/* HIGHLIGHT CARDS */
 .highlight-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* spacing between cards inside the grid */
-    margin-bottom: 30px; /* spacing between separate grids */
+    gap: 20px; 
+    margin-bottom: 30px; 
 }
-
 .highlight-card {
     background: white;
     border-radius: 12px;
@@ -327,36 +263,42 @@ form button {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .highlight-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-
 .highlight-card img {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
-
 .highlight-content {
     padding: 20px;
 }
-
 .highlight-content h3 {
     margin-top: 0;
 }
 
+/* REFERENCE CARDS */
 .reference-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;          /* spacing between cards inside a grid */
-    margin-bottom: 40px; /* spacing between separate grids */
+    gap: 20px;          
+    margin-bottom: 40px; 
 }
-
 .reference-card {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
 }
+
+
+/* FOOTER (I DONT HAVE ONE RN BUT IF I WANNA MAKE) 
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+*/
