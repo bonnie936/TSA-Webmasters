@@ -346,3 +346,17 @@ form button {
 .highlight-content h3 {
     margin-top: 0;
 }
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;          /* spacing between cards inside a grid */
+    margin-bottom: 40px; /* spacing between separate grids */
+}
+
+.reference-card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
