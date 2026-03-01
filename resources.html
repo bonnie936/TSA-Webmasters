@@ -30,32 +30,47 @@
     <select id="categoryFilter" onchange="filterResources()">
         <option value="all">All Categories</option>
         <option value="food">Food</option>
-        <option value="housing">Housing</option>
-        <option value="health">Healthcare</option>
         <option value="education">Education</option>
     </select>
 
-    <div class="resource-card" data-category="food">
-        <h3>Food Pantry</h3>
-        <p>Provides groceries to families in need.</p>
-    </div>
+    <div class="resource-card" 
+     data-category="food"
+     data-title="Filler"
+     data-description="this needs to be replaced"
+     data-image="images/fillerpic.jpg">
 
-    <div class="resource-card" data-category="housing">
-        <h3>Housing Assistance</h3>
-        <p>Rent and utility support programs.</p>
+    <h3>Filler</h3>
+    <p>This also needs to be replaced</p>
     </div>
+    
+    <div class="resource-card" 
+     data-category="education"
+     data-title="Filter but no pic"
+     data-description="idk if this works"
+     data-image="">
 
-    <div class="resource-card" data-category="health">
-        <h3>Health Clinic</h3>
-        <p>Low-cost medical services.</p>
-    </div>
-
-    <div class="resource-card" data-category="education">
-        <h3>Adult Learning Center</h3>
-        <p>GED prep and job training.</p>
+    <h3>Filler w/o the pic</h3>
+    <p>im sleepy</p>
     </div>
 
 </section>
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <div class="modal-body">
+        <div class="modal-text">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+
+        <div class="modal-image">
+            <img id="modal-img" src="" alt="">
+        </div>
+    </div>
+</div>
+</div>
 
 <script>
 function filterResources() {
@@ -89,5 +104,48 @@ function toggleMenu() {
     }
 }
 </script>
+
+
+<script>
+// Modal functionality
+const cards = document.querySelectorAll(".resource-card");
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-description");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".close");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        modalTitle.textContent = card.dataset.title;
+        modalDesc.textContent = card.dataset.description;
+        const modalImageContainer = document.querySelector(".modal-image");
+
+if (card.dataset.image) {
+    modalImg.src = card.dataset.image;
+    modalImageContainer.style.display = "block";
+} else {
+    modalImageContainer.style.display = "none";
+}
+
+        modal.style.display = "flex";
+        document.body.classList.add("modal-open"); // stops background scroll
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
+</script>
+
+
 </body>
 </html>
