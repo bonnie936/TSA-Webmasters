@@ -3,40 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Submit Resource</title>
+<title>Submit a Resource</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="resources.html">Resources</a>
-    <a href="submit.html">Submit Resource</a>
-    <a href="highlights.html">Community Highlights</a>
+<nav>
+    <div class="logo">Johnson County Hub</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="submit.html">Submit Resource</a>
+        <a href="highlights.html">Highlights</a>
+    </div>
 </nav>
 
 <section>
     <h2>Submit a Community Resource</h2>
 
-    <form onsubmit="alert('Thank you for your submission!'); return false;">
+    <form id="resourceForm">
         <label>Resource Name</label>
-        <input type="text" required>
+        <input type="text" id="name" required>
 
         <label>Category</label>
-        <select required>
-            <option>Food</option>
-            <option>Housing</option>
-            <option>Healthcare</option>
-            <option>Education</option>
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="food">Food</option>
+            <option value="education">Education</option>
         </select>
 
         <label>Description</label>
-        <textarea rows="4" required></textarea>
+        <textarea id="description" rows="4" required></textarea>
 
-        <button type="submit">Submit</button>
+        <label>Image URL (optional)</label>
+        <input type="text" id="image">
+
+        <button type="submit">Submit Resource</button>
     </form>
+
 </section>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+}
+
+document.getElementById("resourceForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    document.getElementById("thankYouModal").style.display = "flex";
+    document.body.classList.add("modal-open");
+
+    this.reset();
+});
+
+function closeThankYou() {
+    document.getElementById("thankYouModal").style.display = "none";
+    document.body.classList.remove("modal-open");
+}
+</script>
+
+<!-- Thank You Modal -->
+<div id="thankYouModal" class="modal">
+    <div class="modal-content" style="text-align:center;">
+        <h2>Submission Received</h2>
+        <p>Thank you for helping strengthen our community by sharing this resource.</p>
+        <button onclick="closeThankYou()">Close</button>
+    </div>
+</div>
 
 </body>
 </html>
