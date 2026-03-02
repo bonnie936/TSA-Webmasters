@@ -18,8 +18,8 @@
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="resources.html">Resources</a>
-        <a href="highlights.html">Highlights</a>
         <a href="submit.html">Submit Resource</a>
+        <a href="mission.html">Our Mission</a>
         <a href="references.html">References</a>
     </div>
 </nav>
@@ -31,11 +31,14 @@
 
     <select id="categoryFilter" onchange="filterResources()">
         <option value="all">All Categories</option>
-        <option value="food">Food</option>
         <option value="education">Education</option>
-        <option value="?">?</option>
+        <option value="food">Food</option>
+        <option value="health">Health</option>
+        <option value="shelter">Shelter</option>
+        <option value="other">Other</option>
     </select>
-<!-- Template for resource cards
+
+    <!-- Template for resource cards
     <div class="resource-card" 
      data-category="?"
      data-title="title"
@@ -46,113 +49,156 @@
     <p> on the outside </p>
     </div>
 -->
+    
+    <!-- Public Library-->
     <div class="resource-card" 
      data-category="education"
      data-title="Johnson County Public Library"
      data-description="Our public library has a website with the purpose of providing as diverse a range of links and resources as possible.
                        The public library has long been a source of free education for residents in Johnson County, and it extends its reach by being a place where fun activities are held and volunteer opportunities are given to students who want to give back to their community.
 "
-     data-image="images/fillerpic.jpg">
+     data-image="images/fillerpic.jpg"
+     data-link="https://catalog.johnsoncountypubliclibrary.org/">
 
     <h3>Johnson County Public Library</h3>
     <p> The Johnson County Public Library offers a wide range of resources including books, digital media, and educational programs for all ages. </p>
     </div>
     
+    <!-- Chamber of Commerce -->
     <div class="resource-card" 
-     data-category="?"
+     data-category="other"
      data-title="Johnson County Chamber of Commerce"
      data-description="The Johnson County Chamber of Commerce describes itself as 'a catalyst to promote, aid and support the member businesses with the goal of enhancing the quality of life in our community.'
-                       Paintsville itself serves as a center of commerce, banking, medicine, education, and law for a multi-county region, and is also described as a recreational haven for families. 
                        The Chamber is built of local businesses and professionals working together to make a positive impact, and encourages new members to join if they want to be part of an organization serving as a catalyst for positive change.
 "
-     data-image="">
+     data-image=""
+     data-link="https://sites.google.com/view/johnsoncountychamber/home?pli=1">
 
     <h3>Johnson County Chamber of Commerce</h3>
     <p>A local organization in Paintsville, Kentucky that supports and promotes businesses in the community.</p>
     </div>
 
+    <!-- Health Department -->
     <div class="resource-card" 
-     data-category="?"
+     data-category="health"
      data-title="Johnson County Health Department"
      data-description="The health department provides a range of services aimed at promoting healthy behaviors, preventing disease and injury, ensuring access to safe food and water, offering immunizations, and responding to public health emergencies. 
-The website covers several key areas. 
-On the clinical side, the clinical staff are trained to offer quality treatment and preventative care to all clients. 
 The department also runs special programs, including a CDC-recognized Diabetes Prevention Program for pre-diabetic individuals, and a Freedom From Smoking program — a seven-week, eight-session group program developed by the American Lung Association that provides nicotine replacement patches at a reduced cost. 
 "
-     data-image="">
+     data-image=""
+     data-link="https://johnsoncohealthdept.org">
 
     <h3>Johnson County Health Department</h3>
-    <p> The Johnson County Health Department website is the official online presence for the public health department serving Paintsville and Johnson County, Kentucky, providing information about their health services, programs, and community resources. </p>
+    <p> The Johnson County Health Department website provides information about their health services, programs, and community resources. </p>
     </div>
 
+    <!-- County Clerk -->
     <div class="resource-card" 
-     data-category="?"
+     data-category="other"
      data-title="Johnson County Clerk Office"
-     data-description="The Johnson County Clerk Office proudly serves the citizens of Johnson County, Kentucky, and offers services such as voter registration, document filing, and access to public records through their eCCLIX system, which allows users to view or print documents filed with the office — useful for last-minute title follow-ups, estate settlements, and appraisals. 
+     data-description="The Johnson County Clerk Office offers services such as voter registration, document filing, and access to public records through their eCCLIX system, which allows users to view or print documents filed with the office. 
 The office also offers a free fraud protection service called DOCALERT, which sends email notifications whenever a mortgage or deed is filed in your name or your business name, helping to safeguard residents against potential property fraud by alerting them to any unexpected activity involving their property.
-Motor vehicle licensing is one of the most widely used services offered by the County Clerk's office. 
-Residents can renew vehicle registrations online, by mail, or in person, and all motorboat registrations and transfers are also handled through the office
+Furthermore, residents can renew vehicle registrations online, by mail, or in person, and all motorboat registrations and transfers are also handled through the office
 "
-     data-image="">
+     data-image=""
+     data-link="https://johnson.countyclerk.us">
 
     <h3>Johnson County Clerk Office</h3>
     <p> The Johnson County Clerk Office provides residents with access to a variety of government services including records, voter registration, and motor vehicle licensing. </p>
     </div>
 
+    <!-- Food Pantries -->
     <div class="resource-card" 
-     data-category="?"
+     data-category="food"
      data-title="Food Pantries"
-     data-description="IDK YET"
-     data-image="">
+     data-description="Findhelp.org is a free, nationwide social services search platform that helps people locate nearby food pantries and other community resources. The Paintsville, KY page specifically lists food assistance programs serving Johnson County and the surrounding region.
+ 
+This platform makes it easy for residents to search for programs by location, filter by need (such as food, housing, or transportation), and connect directly with service providers. 
+Fresh fruits, vegetables, eggs, and lean meats are particularly expensive in rural areas like Johnson County, making food pantry resources especially critical for the community.
+"
+     data-image=""
+     data-link="https://www.findhelp.org/food/food-pantry--paintsville-ky">
 
     <h3>Food Pantries</h3>
-    <p> NEEDS TO BE EDITED! This website shows nearby food pantries in Johnson County, helping those experiencing food insecurity. </p>
+    <p> The findhelp.org food pantry page for Paintsville, KY is a searchable directory that connects residents of Paintsville and Johnson County with local food assistance programs and resources in their area. </p>
     </div>
 
+    <!-- Warming Center -->
     <div class="resource-card" 
-     data-category="?"
+     data-category="shelter"
      data-title="Warming Center"
-     data-description="The Paintsville/Johnson County Warming Center is located at 342 Second Street, Paintsville, in what was formerly known as the Johnson County Sheriff's Office. 
-It provides a warm and dry environment for homeless residents during brief periods of inclement weather. 
-The center opens on nights when the temperature falls to 20 degrees or below and operates as a come-and-go facility with no overnight stays permitted.
- It opens at 7:00 PM and remains open until 7:00 AM on days it is operational. 
-The center was established through a collaborative effort between city and county government, who formed a task force to address the needs of the homeless population in Paintsville and Johnson County. 
-Emergency Management Director Gary McClure noted that the center is open to anyone who may need it — not just the homeless — including those who may have lost power or are experiencing other emergencies.
+     data-description="The Paintsville/Johnson County Warming Center provides a warm and dry environment for homeless residents during brief periods of inclement weather. 
+The center opens on nights when the temperature falls to 20 degrees or below from 7:00 PM to 7:00 AM.
+The center is open to anyone who may need it — not just the homeless — including those who may have lost power or are experiencing other emergencies.
 "
-     data-image="">
+     data-image=""
+     data-link="https://www.johnsoncoky.com/residents/emergency-management/warming-center">
 
     <h3>Warming Center</h3>
     <p> The Warming Center page for Johnson County provides information about emergency cold weather shelter available to homeless residents and anyone in need during extreme winter temperatures in Paintsville. </p>
     </div>
 
+    <!-- County Website -->
     <div class="resource-card" 
-     data-category="?"
+     data-category="other"
      data-title="Johnson County Official Website"
-     data-description="Johnson County, Kentucky was created by the legislature on February 24, 1843, carved from Lawrence, Floyd, and Morgan counties. 
-The town of Paintsville was founded in 1790 and was first known as Paint Lick Station. 
-The county's economy was initially based on agriculture and timbering, but changed dramatically in 1904 with the arrival of the railroad, which ushered in the coal era. 
-The oil and gas industry also developed beginning in 1917, and by 1940 the county reached its peak population of 25,771 residents. 
-The website covers a wide range of county services and departments. 
+     data-description="The website covers a wide range of county services and departments. 
 The government section includes links to Fiscal Court minutes, agendas, video archives, precinct maps, bid documents, and a link to the City of Paintsville website.
 "
-     data-image="">
+     data-image=""
+     data-link="https://www.johnsoncoky.com/home">
 
     <h3>Johnson County Official Website</h3>
     <p> This is the official website for Johnson County, Kentucky, serving as a central hub for county government information, resident services, elected officials, emergency management, and visitor resources for Paintsville and the surrounding area. </p>
     </div>
 
+    <!-- 4H Extension Office -->
     <div class="resource-card" 
-     data-category="?"
+     data-category="education"
      data-title="4H Extension Office"
      data-description="The Johnson County 4-H program has been a significant contributor to community development and youth engagement in Johnson County. 
 As part of Kentucky Cooperative Extension, the program's mission is to make a positive difference in the lives of Kentucky citizens through non-formal education for the entire family, with agents and volunteers taking university research and applying it in ways that different age groups can learn from and use in their own lives.
 "
-     data-image="">
+     data-image=""
+     data-link="https://www.facebook.com/4H.Johnson/">
 
     <h3>4H Extension Office</h3>
-    <p> The Johnson County 4-H program is a youth development organization operated through the University of Kentucky Cooperative Extension Service, dedicated to building leadership, life skills, and community engagement in young people across Johnson County, Kentucky. </p>
+    <p> The Johnson County 4-H program is a youth development organization dedicated to building leadership, life skills, and community engagement in young people across Johnson County, Kentucky. </p>
     </div>
 
+    <!-- Changes Center -->
+    <div class="resource-card" 
+     data-category="other"
+     data-title="The Changes Center"
+     data-description="The Changes Center is used for MCCC community programs, including the Johnson County Community of Hope (JCCOH) and the Responsible Fatherhood Opportunities for Reentry and Mobility (ReFORM) program. 
+The Johnson County Community of Hope was developed by the community in an effort to decrease out-of-home care for children due to substance use, and provides various daily living skills including meal preparation through new kitchen facilities.
+"
+     data-image=""
+     data-link="https://www.mtcomp.org/changescenter">
+
+    <h3>The Changes Center</h3>
+    <p> The Changes Center is a facility dedicated to community-based programs focused on substance use recovery, family strengthening, and reentry support for Johnson County residents. </p>
+    </div>
+
+    <!--Johnson County Schools-->
+    <div class="resource-card" 
+     data-category="education"
+     data-title="Johnson County Schools"
+     data-description="Johnson County Schools, a network of elementary schools, a middle school, and a high school, are free to attend for all local students. 
+     Beyond academics, they support students' well-being through resource centers offering free food, clothing, hygiene products, and other essentials. 
+     During winter, the schools also organize food and supply drives to ensure families have access to necessities, even during severe weather."
+     data-image=""
+     data-link="https://www.johnson.k12.ky.us">
+
+    <h3>Johnson County Schools</h3>
+    <p> Johnson County Schools are free public schools, offering education along with additional student support resources including free food, clothing, and other essentials for students in need. </p>
+    </div>
+
+    <h2>Share a Community Resource</h2>
+    <p>Do you know of a community resource that isn't listed here? Help us build a more complete resource hub by submitting it!</p>
+    <a href="submit.html" style="text-decoration: none;">
+        <bigbutton> Submit a Resource </bigbutton>
+    </a>
 </section>
 <!-- Modal -->
 <div id="modal" class="modal">
@@ -161,9 +207,14 @@ As part of Kentucky Cooperative Extension, the program's mission is to make a po
 
     <div class="modal-body">
         <div class="modal-text">
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
-        </div>
+        <h2 id="modal-title"></h2>
+
+        <!-- Change from <p> to <div> -->
+        <div id="modal-description"></div>
+
+        <!-- Add this button directly under description -->
+        <a id="modal-link" target="_blank" class="modal-btn">Visit Website</a>
+    </div>
 
         <div class="modal-image">
             <img id="modal-img" src="" alt="">
@@ -197,11 +248,7 @@ function filterResources() {
 <script>
 function toggleMenu() {
     const nav = document.getElementById("navLinks");
-    if (nav.style.display === "flex") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "flex";
-    }
+    nav.classList.toggle("active");
 }
 </script>
 
@@ -214,22 +261,56 @@ const modalTitle = document.getElementById("modal-title");
 const modalDesc = document.getElementById("modal-description");
 const modalImg = document.getElementById("modal-img");
 const closeBtn = document.querySelector(".close");
+const modalLink = document.getElementById("modal-link");
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
+
         modalTitle.textContent = card.dataset.title;
-        modalDesc.textContent = card.dataset.description;
+
+        const description = card.dataset.description.trim();
+        const lines = description.split(/\n+/);
+
+        let formattedHTML = "";
+        let inList = false;
+
+        lines.forEach(line => {
+            line = line.trim();
+
+            if (line.startsWith("-")) {
+                if (!inList) {
+                    formattedHTML += "<ul>";
+                    inList = true;
+                }
+                formattedHTML += `<li>${line.substring(1).trim()}</li>`;
+            } else {
+                if (inList) {
+                    formattedHTML += "</ul>";
+                    inList = false;
+                }
+                formattedHTML += `<p>${line}</p>`;
+            }
+        });
+
+        if (inList) formattedHTML += "</ul>";
+        modalDesc.innerHTML = formattedHTML;
+        if (card.dataset.link) {
+            modalLink.href = card.dataset.link;
+            modalLink.style.display = "inline-block";
+        } else {
+            modalLink.style.display = "none";
+        }
         const modalImageContainer = document.querySelector(".modal-image");
 
-if (card.dataset.image) {
-    modalImg.src = card.dataset.image;
-    modalImageContainer.style.display = "block";
-} else {
-    modalImageContainer.style.display = "none";
-}
+        if (card.dataset.image) {
+            modalImg.src = card.dataset.image;
+            modalImageContainer.style.display = "block";
+        } else {
+            modalImageContainer.style.display = "none";
+        }
 
         modal.style.display = "flex";
-        document.body.classList.add("modal-open"); // stops background scroll
+        document.body.classList.add("modal-open");
     });
 });
 
