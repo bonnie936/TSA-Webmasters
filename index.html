@@ -19,8 +19,8 @@
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="resources.html">Resources</a>
-        <a href="highlights.html">Highlights</a>
         <a href="submit.html">Submit Resource</a>
+        <a href="mission.html">Our Mission</a>
         <a href="references.html">References</a>
     </div>
 </nav>
@@ -40,26 +40,62 @@
         The spirit of looking out for one another has always run deep here. That tradition didn't fade with the passing of time; if anything, it only grew stronger. 
         Today, that same sense of belonging and mutual respect continues to define who we are — not just as a community, but as neighbors, friends, and family. 
     </p>
-    <h2>Our Mission</h2>
-    <p>
-        The Johnson County Community Resource Hub is dedicated to connecting residents with the support and opportunities they need to thrive. 
-        We believe that everyone deserves access to resources that can help them overcome challenges and improve their quality of life. 
-        This website will pull together resources that demonstrate how deep this connection between one another runs. 
-        It shows the networks of support, collaboration, and civic engagement that have been built over generations.
-    </p>
-    <a href="resources.html">
-        <bigbutton>See Community Resources</bigbutton>
+    <a href="mission.html" style="text-decoration: none;">
+        <bigbutton> Learn About Our Mission </bigbutton>
     </a>
+
+    <h2>Community Highlights</h2>
+    <p style="margin-bottom:30px;">
+        Spotlighting organizations making a difference in our community.
+    </p>
+
+    <div class="highlight-grid">
+
+        <div class="highlight-card">
+            <img src="images/fillerpic.jpg" alt="">
+            <div class="highlight-content">
+                <h3>Filler</h3>
+                <p>yap yap yap</p>
+            </div>
+        </div>
+    </div>
+        
+    <div class="highlight-grid">
+
+        <div class="highlight-card">
+            <img src="images/fillerpic.jpg" alt="">
+            <div class="highlight-content">
+                <h3>Filler 2</h3>
+                <p>yap yap yap</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight-grid">
+
+        <div class="highlight-card">
+            <img src="images/fillerpic.jpg" alt="">
+            <div class="highlight-content">
+                <h3>Filler 3</h3>
+                <p>yap yap yap</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>Community Resources</h2>
+    <p style="margin-bottom:30px;">
+        Explore the wide range of resources available to support our community.
+    </p>
+    <a href="resources.html" style="text-decoration: none;">
+        <bigbutton> See Community Resources </bigbutton>
+    </a>
+    
 </section>
 
 <script>
 function toggleMenu() {
     const nav = document.getElementById("navLinks");
-    if (nav.style.display === "flex") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "flex";
-    }
+    nav.classList.toggle("active");
 }
 </script>
 
