@@ -18,8 +18,8 @@
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="resources.html">Resources</a>
-        <a href="highlights.html">Highlights</a>
         <a href="submit.html">Submit Resource</a>
+        <a href="mission.html">Our Mission</a>
         <a href="references.html">References</a>
     </div>
 </nav>
@@ -36,7 +36,7 @@
     <div class="reference-grid">
         <div class="reference-card">
             <h4>Code</h4>
-            <p>This website was coded using CSS, HTML, and JavaScript.</p>
+            <p>This website was built using HTML, CSS, and JavaScript, and was developed on GitHub and Visual Studio Code.</p>
         </div>
         <div class="reference-card">
             <h4>Hosting</h4>
@@ -44,8 +44,17 @@
         </div>
     </div>
 
-    <!-- Media Sources Grid -->
-    <h3>Media Sources</h3>
+    <!-- Resources Grid -->
+     <h3>Resources</h3>
+     <div class="reference-grid">
+        <div class="reference-card">
+            <h4>Websites</h4>
+            <p>All websites referenced in the project are listed on their individual cards in the Resources section.</p>
+        </div>
+     </div>
+
+    <!-- Images Grid -->
+    <h3>Images</h3>
     <div class="reference-grid">
         <div class="reference-card">
             <h4>Image</h4>
@@ -53,3 +62,12 @@
         </div>
     </div>
 </section>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+}
+</script>
+
+</body>
