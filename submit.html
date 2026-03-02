@@ -18,15 +18,17 @@
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="resources.html">Resources</a>
-        <a href="highlights.html">Highlights</a>
         <a href="submit.html">Submit Resource</a>
+        <a href="mission.html">Our Mission</a>
         <a href="references.html">References</a>
     </div>
 </nav>
 
 <section>
     <h2>Submit a Community Resource</h2>
-    <p>Have a community resource you'd like to share? Fill out the form below to submit it for review.</p>
+    <p> Submitting resources helps connect residents with valuable resources in Johnson County. 
+        By sharing a resource, you contribute to a stronger, more informed, and connected community.
+    </p>
 
     <form id="resourceForm">
         <label>Resource Name</label>
@@ -35,8 +37,11 @@
         <label>Category</label>
         <select id="category" required>
             <option value="">Select Category</option>
-            <option value="food">Food</option>
             <option value="education">Education</option>
+            <option value="food">Food</option>
+            <option value="health">Health</option>
+            <option value="shelter">Shelter</option>
+            <option value="other">Other</option>
         </select>
 
         <label>Description</label>
@@ -53,9 +58,11 @@
 <script>
 function toggleMenu() {
     const nav = document.getElementById("navLinks");
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    nav.classList.toggle("active");
 }
+</script>
 
+<script>
 document.getElementById("resourceForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
