@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Highlights</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Johnson County Hub</div>
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="resources.html">Resources</a>
+        <a href="submit.html">Submit Resource</a>
+        <a href="mission.html">Our Mission</a>
+        <a href="references.html">References</a>
+    </div>
+</nav>
+
+<section>
+    <h2>Project Purpose</h2>
+    <p>
+        The Johnson County Community Resource Hub is dedicated to connecting residents with the support and opportunities they need to thrive. 
+        We believe that everyone deserves access to resources that can help them overcome challenges and improve their quality of life.
+        This platform highlights the strong networks of collaboration, support, and civic engagement that define our community.
+    </p>
+
+    <a href="resources.html" style="text-decoration: none;">
+        <bigbutton> Explore the Resource Directory </bigbutton>
+    </a>
+
+    <h2>How It Works</h2>
+    <ul>
+    <li>The homepage showcases community highlights for quick access.</li>
+    <li>Residents can browse a curated collection of local resources organized by category.</li>
+    <li>New resources can be submitted to expand the directory over time.</li>
+    </ul>
+
+    <h2>Project Goals</h2>
+    <ul>
+    <li>Highlight important community resources.</li>
+    <li>Provide an accessible platform for residents to find local support services.</li>
+    <li>Encourage community engagement and collaboration among residents and organizations.</li>
+    </ul>
+</section>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
