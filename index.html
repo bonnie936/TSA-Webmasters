@@ -5,96 +5,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Johnson County Resource Hub</title>
+<title>How to Use AI In Education</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-    <div class="logo">Johnson County Hub</div>
+    <div class="logo">How to Use AI In Education</div>
     <div class="menu-icon" onclick="toggleMenu()">
         ☰
     </div>
     <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
-        <a href="resources.html">Resources</a>
-        <a href="submit.html">Submit Resource</a>
-        <a href="mission.html">Our Mission</a>
+        <a href="fundamentals.html">Fundamentals</a>
+        <a href="practical.html">Practical Uses</a>
+        <a href="ethical.html">Ethical Use</a>
         <a href="references.html">References</a>
     </div>
 </nav>
 
 <header>
     <div class="header-content">
-        <h1>Johnson County Community Resource Hub</h1>
-        <p>Connecting residents with local support and opportunities.</p>
+        <h1>How to Use AI In Education</h1>
+        <p>Utilizing tools effectively and ethically</p>
     </div>
 </header>
 
 <section>
-    <h2>About the Community</h2>
+    <h2>How to Use AI as a Tool</h2>
     <p>
-        Johnson County has long been a center of rural community, cooperation, and shared purpose. 
-        Generations of families have worked side by side to ensure that neighbors never faced hardship alone. 
-        The spirit of looking out for one another has always run deep here. That tradition didn't fade with the passing of time; if anything, it only grew stronger. 
-        Today, that same sense of belonging and mutual respect continues to define who we are — not just as a community, but as neighbors, friends, and family. 
+        AI can be used as a tool in many ways. However, it is important to use it in ways that benefit you. As a student, AI can be helpful to get assignments done,
+        learn how to solve problems, and study new subjects whenever you have a subpar teacher. However, it’s important to conduct your use of AI in an ethical way.
+        You can do this by first solving the problems on your own. You can only learn if you first attempt something by yourself.
+        Furthermore, once you’ve tried one problem using the help of AI, you should keep practicing and try the rest on your own. 
+        Only use AI if you get stuck and a teacher isn’t readily available. 
     </p>
-    <a href="mission.html" style="text-decoration: none;">
+    
+
+    <!--<a href="ethical.html" style="text-decoration: none;">
         <bigbutton> Learn About Our Mission </bigbutton>
     </a>
-
-    <h2>Community Highlights</h2>
-    <p style="margin-bottom:30px;">
-        Spotlighting organizations making a difference in our community.
-    </p>
+-->
 
     <div class="highlight-grid">
+        <div class="highlight-card"
+            data-title="Fundamentals of AI"
+            data-description="Basic information about AI models and how it is built"
+            data-link="fundamentals.html">
 
-        <div class="highlight-card">
-            <img src="images/publiclibrary.jpeg" alt="">
+            <img src="images/fillerpic.jpg" alt="Community resource">
             <div class="highlight-content">
-                <h3>Johnson County Public Library</h3>
-                <p>Our public library has a website with the purpose of providing as diverse a range of links and resources as possible.
-                       The public library has long been a source of free education for residents in Johnson County, and it extends its reach by being a place where fun activities are held and volunteer opportunities are given to students who want to give back to their community.</p>
+                <h3>Fundamentals of AI</h3>
+                <p>Basic information about AI models and how it is built</p>
             </div>
         </div>
     </div>
         
     <div class="highlight-grid">
+        <div class="highlight-card"
+            data-title="Practically Using AI"
+            data-description="How to efficiently use each AI tools"
+            data-link="practical.html">
 
-        <div class="highlight-card">
-            <img src="images/extensionoffice.jpeg" alt="">
+            <img src="images/fillerpic.jpg" alt="Community resource">
             <div class="highlight-content">
-                <h3>4H Extension Office</h3>
-                <p>The Johnson County 4-H program has been a significant contributor to community development and youth engagement in Johnson County. 
-As part of Kentucky Cooperative Extension, the program's mission is to make a positive difference in the lives of Kentucky citizens through non-formal education for the entire family, with agents and volunteers taking university research and applying it in ways that different age groups can learn from and use in their own lives.</p>
+                <h3>Practically Using AI</h3>
+                <p>How to efficiently use each AI tools</p>
             </div>
         </div>
     </div>
 
     <div class="highlight-grid">
+        <div class="highlight-card"
+            data-title="Ethically Using AI"
+            data-description="How to use AI ethically in school, workplace, etc."
+            data-link="ethical.html">
 
-        <div class="highlight-card">
-            <img src="images/highschool.jpeg" alt="">
+            <img src="images/fillerpic.jpg" alt="Community resource">
             <div class="highlight-content">
-                <h3>Johnson County Schools</h3>
-                <p>Johnson County Schools, a network of elementary schools, a middle school, and a high school, are free to attend for all local students. 
-     Beyond academics, they support students' well-being through resource centers offering free food, clothing, hygiene products, and other essentials. 
-     During winter, the schools also organize food and supply drives to ensure families have access to necessities, even during severe weather.</p>
+                <h3>Ethically Using AI</h3>
+                <p>How to use AI ethically in school, workplace, etc.</p>
             </div>
         </div>
     </div>
 
-    <h2>Community Resources</h2>
-    <p style="margin-bottom:30px;">
-        Explore the wide range of resources available to support our community.
-    </p>
-    <a href="resources.html" style="text-decoration: none;">
-        <bigbutton> See Community Resources </bigbutton>
-    </a>
-    
-</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h2 id="modal-title"></h2>
+
+        <p id="modal-description"></p>
+
+        <a id="modal-link" href="">
+            <button>Learn More</button>
+        </a>
+    </div>
+</div>
+
+<script>
+// Modal functionality
+const cards = document.querySelectorAll(".highlight-card");
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-description");
+const modalLink = document.getElementById("modal-link");
+const closeBtn = document.querySelector(".close");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+
+        modalTitle.textContent = card.dataset.title;
+        modalDesc.textContent = card.dataset.description;
+
+        modalLink.href = card.dataset.link;
+
+        modal.style.display = "flex";
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+</script>
+
+
 
 <script>
 function toggleMenu() {
