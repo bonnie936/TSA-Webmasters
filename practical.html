@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Highlights</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">How to Use AI In Education</div>
+    <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="fundamentals.html">Fundamentals</a>
+        <a href="practical.html">Practical Uses</a>
+        <a href="ethical.html">Ethical Use</a>
+        <a href="references.html">References</a>
+    </div>
+</nav>
+
+<section>
+    <h2>Practically Using AI</h2>
+
+    <!--
+    <a href="resources.html" style="text-decoration: none;">
+        <bigbutton> idk where i want this to lead to tbh </bigbutton>
+    </a>
+-->
+    <h2 class="no-line">What does each tool specialize in?</h2>
+    <p>
+        To use AI efficiently, you first must know what each tool specializes in. This is important for you to get the best results from each tool. For instance...
+    </p>
+    <ul>
+    <li>OpenAI's ChatGPT is the best all-around choice for web search and brainstorming</li>
+    <li>Anthropic's Claude is strongest for writing, editing, creative work, and coding</li>
+    </ul>
+
+    <h2 class="no-line">Be specific and clear in your prompt: Aim, Context, Rules</h2>
+    <ul>
+    <li>Aim: What do you want the AI to do?</li>
+    <li>Context: Who is this for and what background does it need?</li>
+    <li>Rules: Any limits on length, tone, or format. This saves you time from fussing with the AI later on when it does not give you what you exactly need or want.</li>
+    </ul>
+
+    <h2 class="no-line">Fact Check</h2>
+    <ul>
+    <li>Remember, AI predicts likely text rather than verifying facts, so it can sound confident and still be wrong. Check what it generates before you use it.</li>
+    </ul>
+</section>
+
+<script>
+function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
